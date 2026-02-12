@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<style>
+/* ===== HOME PAGE  ===== */
+
+.card{
+    position:relative;
+    overflow:hidden;
+    border-radius:14px;
+}
+
+/* background overlay */
+.card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(255,255,255,0.88);
+    z-index:1;
+}
+
+.card > *{
+    position:relative;
+    z-index:2;
+}
+
+/* Welcome section */
+.welcome-title{
+    font-size:26px;
+    font-weight:700;
+    color:#0f172a;
+    margin-bottom:10px;
+}
+
+.welcome-sub{
+    color:#475569;
+    font-size:15px;
+    line-height:1.6;
+}
+
+/* grid */
+.home-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:20px;
+}
+
+/* icons */
+.icon{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+/* titles */
+.feature-title{
+    font-size:17px;
+    font-weight:600;
+    margin-bottom:6px;
+    color:#1e293b;
+}
+
+/* why section */
+.why{
+    background:linear-gradient(to right,#eff6ff,#ffffff);
+    border-left:6px solid #2563eb;
+}
+</style>
+
+
+<!-- Welcome -->
+<div class="card welcome-card">
+    <div class="welcome-title">Welcome to VJ Educational Academy</div>
+    <div class="welcome-sub">
+        We provide high quality academic support for school and college students.
+        Structured lessons, practical understanding and exam focused preparation
+        help you achieve better results with confidence.
+    </div>
+</div>
+
+
+<!-- Features -->
+<div class="home-grid">
+
+    <div class="card learn">
+        <div class="icon">📘</div>
+        <div class="feature-title">Structured Learning</div>
+        <p>Chapter-wise content prepared according to syllabus and exam pattern.</p>
+    </div>
+
+    <div class="card concept">
+        <div class="icon">🧠</div>
+        <div class="feature-title">Concept Clarity</div>
+        <p>Simple explanations that make even difficult topics easy to understand.</p>
+    </div>
+
+    <div class="card practice">
+        <div class="icon">📝</div>
+        <div class="feature-title">Practice & Tests</div>
+        <p>Assignments, important questions and revision support.</p>
+    </div>
+
+    <div class="card exam">
+        <div class="icon">🎯</div>
+        <div class="feature-title">Exam Success</div>
+        <p>Score boosting strategies and guidance from experienced faculty.</p>
+    </div>
+
+</div>
+
+
+<!-- Why choose us -->
+<div class="card why">
+    <h3>Why Students Love Learning Here ❤️</h3>
+
+    <div>
+        ✔ Friendly learning environment <br>
+        ✔ Step-by-step teaching approach <br>
+        ✔ Regular academic monitoring <br>
+        ✔ Updated study materials <br>
+        ✔ Support for competitive growth
+    </div>
+</div>
+
+{% endblock %}

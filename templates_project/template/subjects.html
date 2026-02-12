@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>{{ year }} Year - {{ group }}</h2>
+
+<div class="grid">
+    {% for sub in subjects %}
+    <div class="card">
+        <h3>{{ sub }}</h3>
+
+        {% if sub == "English" %}
+            <a href="/content/" class="btn">Theory</a>
+        {% else %}
+            <a href="/content/" class="btn">Theory</a>
+            <a href="/content/" class="btn">Practical</a>
+        {% endif %}
+
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

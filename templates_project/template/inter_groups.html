@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>{{ year }} Year - Choose Group</h2>
+
+<div class="grid">
+    <div class="card">
+        <h3>MPC</h3>
+        <a href="/inter/subjects/{{ year }}/mpc/" class="btn">Enter</a>
+    </div>
+
+    <div class="card">
+        <h3>BiPC</h3>
+        <a href="/inter/subjects/{{ year }}/bipc/" class="btn">Enter</a>
+    </div>
+
+    <div class="card">
+        <h3>CEC</h3>
+        <a href="/inter/subjects/{{ year }}/cec/" class="btn">Enter</a>
+    </div>
+
+    <div class="card">
+        <h3>MEC</h3>
+        <a href="/inter/subjects/{{ year }}/mec/" class="btn">Enter</a>
+    </div>
+</div>
+
+{% endblock %}

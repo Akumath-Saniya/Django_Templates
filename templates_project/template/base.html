@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VJ Educational Academy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            margin:0;
+            font-family:'Poppins', sans-serif;
+            background:#f1f5f9;
+        }
+
+        /* ===== Sidebar ===== */
+        .sidebar{
+            position:fixed;
+            width:240px;
+            height:100%;
+            background:#707a94;
+            padding-top:20px;
+            color:white;
+            box-shadow:2px 0 12px rgba(0,0,0,0.1);
+        }
+
+        .logo{
+            text-align:center;
+            font-size:20px;
+            font-weight:700;
+            margin-bottom:35px;
+            letter-spacing:1px;
+        }
+
+        .sidebar a{
+            display:block;
+            padding:12px 22px;
+            color:#cbd5e1;
+            text-decoration:none;
+            font-size:18px;
+            transition:0.3s;
+            margin:4px 0;
+        }
+
+        .sidebar a:hover{
+            background:linear-gradient(to right,#2563eb,#38bdf8);
+            color:white;
+            border-radius:6px;
+            margin-left:10px;
+            margin-right:10px;
+        }
+
+        /* ===== Header ===== */
+        .header{
+            margin-left:240px;
+            padding:22px 30px;
+            background:white;
+            box-shadow:0 2px 10px rgba(0,0,0,0.06);
+            border-bottom:3px solid #2563eb; /* energy line */
+        }
+
+        .header h2{
+            margin:0;
+            font-size:22px;
+            font-weight:700;
+            color:#0f172a;
+        }
+
+        /* ===== Main ===== */
+        .main{
+            margin-left:240px;
+            padding:30px;
+            min-height:80vh;
+        }
+
+        /* ===== Cards ===== */
+        .card{
+            background:white;
+            padding:22px;
+            border-radius:12px;
+            margin-bottom:20px;
+            transition:0.3s;
+            border-left:5px solid #2563eb;  /* highlight */
+            box-shadow:0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .card:hover{
+            transform:translateY(-6px);
+            box-shadow:0 12px 22px rgba(0,0,0,0.12);
+        }
+
+        /* ===== Buttons ===== */
+        .btn{
+            display:inline-block;
+            padding:10px 18px;
+            background:#2563eb;
+            color:white;
+            text-decoration:none;
+            border-radius:8px;
+            margin-top:10px;
+            font-size:14px;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:#1e40af;
+            transform:scale(1.05);
+        }
+
+        /* ===== Grid ===== */
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+            gap:20px;
+        }
+
+        /* ===== Footer ===== */
+        footer{
+            margin-left:240px;
+            text-align:center;
+            padding:15px;
+            font-size:13px;
+            color:#475569;
+        }
+
+        /* ===== Responsive ===== */
+        @media(max-width:768px){
+            .sidebar{
+                width:200px;
+            }
+            .header,.main,footer{
+                margin-left:200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="sidebar">
+    <div class="logo">
+        VJ Academy
+    </div>
+
+    <a href="/">Home</a>
+    <a href="/tenth/">10th Class</a>
+    <a href="/inter/">Intermediate</a>
+    <a href="/btech1/">B.Tech 1st Year</a>
+    <a href="/login/">Login</a>
+</div>
+
+<div class="header">
+    <h2>VJ Educational Academy – Madanapalle</h2>
+</div>
+
+<div class="main">
+    {% block content %}
+    {% endblock %}
+</div>
+
+<footer>
+    © 2026 VJ Innovative Training | Madanapalle, Andhra Pradesh
+</footer>
+
+</body>
+</html>
